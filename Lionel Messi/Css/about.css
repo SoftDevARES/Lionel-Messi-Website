@@ -1,0 +1,358 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+/*------------Header------------*/
+
+.header {
+    background-color: rgb(54, 54, 54);
+    width: 110px;
+    height: 1000px;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+}
+
+.header img {
+    width: 110px;
+    opacity: 0.6;
+    display: flex;
+}
+
+.nav-links hr {
+    border: 1px solid;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0px;
+    height: 500px;
+}
+
+.nav-links ul li {
+    margin: 0 30px;
+    transition: 1.2s;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin: 5px auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 80%;
+}
+
+.nav-links ul li:hover {
+    opacity: 0.3;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.nav-links ul li a i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav .fas {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+
+    .header::after {
+        content: "Lionel Messi";
+        color: white;
+        font-size: 24px;
+        position: relative;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .fas {
+        padding: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+        width: 200px;
+        top: -10px;
+        left: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.3s;
+    }
+
+    nav .fas {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+/*------------messi------------*/
+.messi {
+    margin-left: 110px;
+}
+
+@media (max-width: 700px) {
+    .messi {
+        margin-left: 0px;
+    }
+}
+
+.messi p {
+    color: #ffffff;
+    line-height: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------imagearea------------*/
+.imagearea {
+    width: 20%;
+    float: right;
+    margin-top: 90px;
+    display: block;
+}
+
+.imagearea hr {
+    border: 1px solid;
+    color: rgb(255, 255, 255);
+    width: 30%;
+    margin: 0;
+}
+
+.imagearea img {
+    margin-bottom: 70px;
+    object-fit: cover;
+}
+
+.image-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.card img {
+    object-fit: cover;
+    opacity: 1;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+}
+
+.layer:hover {
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+.layer p {
+    width: 70%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 1.2s;
+}
+
+.layer:hover p {
+    bottom: 37%;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .imagearea{
+        display: none;
+    }
+}
+
+
+/*------------textarea------------*/
+
+.textarea {
+    float: left;
+    width: 70%;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.textarea .fa-futbol {
+    color: #fff;
+    float: left;
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.textarea hr {
+    border: 1px solid;
+    color: rgb(255, 255, 255);
+    width: 30%;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.textarea h1 {
+    font-family: "Gwendolyn", cursive;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.textarea h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    color: aliceblue;
+}
+
+.textarea h3 {
+    margin-top: 30px;
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    color: aliceblue
+}
+
+@media (max-width: 700px) {
+    .textarea {
+        width: 80%;
+        margin-top: 120px;
+    }
+
+    .textarea h2 {
+        font-size: 20px;
+    }
+    
+    .textarea h3 {
+        font-size: 10px;
+    }
+
+    .textarea p{
+        font-size: 15px;
+    }
+}
+
+/*--------------------footer-----------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    top: 0px;
+}
+
+footer ul {
+    display: flex;
+    font-size: 48px;
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 0px 10px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+footer ul li a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer ul li i:hover {
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+@media (max-width: 1000px) {
+    footer {
+        z-index: -1;
+        top: 7000px;
+        position: relative;
+    }
+}
