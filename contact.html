@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <script src="https://kit.fontawesome.com/762b2a5f62.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/kupalar/101.png">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <img src="images/FkSEBKoX0AEp6BG.jpg" alt="">
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+                    <hr class="hr">
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i>Hakkımda</a></li>
+                    <hr>
+                    <li><a href="cup.html"><i class="fa-solid fa-trophy"></i>Başarılarım</a></li>
+                    <hr>
+                    <li><a href="photograph.html"><i class="fa-solid fa-image"></i>Fotoğraflarım</a></li>
+                    <hr>
+                    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>İletişim</a></li>
+                    <hr>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <div class="messi">
+
+        <!-----------------hero------------------->
+        <section class="hero">
+            <div class="hero-text">
+                <p>Lionel Messi</p>
+            </div>
+        </section>
+
+        <!--------------İletişim-------------------->
+        <div class="container">
+            <h2>İletişim</h2>
+            <form action="Php/form-handler.php" method="post">
+                <label for="name">İsim</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Konu</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Gönder">
+            </form>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+            <p>Çarşamba Ticaret Borsası Meslek Yüksekokulu </p>
+            <div class="a">© 2024 Furkan Türker</div>
+        </footer>
+    </div>
+
+
+    <!-----------------Menu------------------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.left = "0px";
+        }
+        function hideMenu() {
+            navLinks.style.left = "-200px";
+        }
+    </script>
+</body>
+
+</html>

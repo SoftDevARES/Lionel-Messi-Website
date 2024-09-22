@@ -1,0 +1,540 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+/*------------Header------------*/
+
+.header {
+    background-color: rgb(54, 54, 54);
+    width: 110px;
+    height: 1000px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.header img {
+    width: 110px;
+    opacity: 0.6;
+    display: flex;
+}
+
+.nav-links hr {
+    border: 1px solid;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0px;
+    height: 500px;
+}
+
+.nav-links ul li {
+    margin: 0 30px;
+    transition: 1.2s;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin: 5px auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 80%;
+}
+
+.nav-links ul li:hover {
+    opacity: 0.3;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.nav-links ul li a i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav .fas {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        
+    }
+
+    .header::after {
+        content: "Lionel Messi";
+        color: white;
+        font-size: 24px;
+        position: relative;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .fas {
+        padding: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+        width: 200px;
+        top: -10px;
+        left: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.3s;
+    }
+
+    nav .fas {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+/*------------messi------------*/
+.messi {
+    margin-left: 110px;
+}
+
+@media (max-width: 700px) {
+    .messi{
+        margin-left: 0px; 
+    }
+}
+
+/*------------hero------------*/
+.hero {
+    top: -1000px;
+    float: right;
+    padding-bottom: -200px;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.9)), url(../images/wallpaperflare.com_wallpaper.jpg);
+    opacity: 0.6;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+/*------------abaut------------*/
+
+.about {
+    position: relative;
+    padding: 20px;
+    z-index: 2;
+    min-height: 20vh;
+    color: black;
+    float: inline-start;
+    margin-top: -1000px;
+}
+
+.about h3{
+    font-size: 40px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    color: aliceblue;
+}
+
+.about p{
+    line-height: 27px;
+    color: aliceblue;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about a{
+    color: aliceblue;
+    transition: 1s;
+}
+
+.about a:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        width: 100%;
+        padding: 100px 0px 0px 0px;
+        overflow-x: hidden;
+    }
+}
+
+/*------------cup------------*/
+
+.cup {
+    position: relative;
+    top: -700px;
+}
+
+.card-head {
+    color: #fff;
+}
+
+.card-head h3 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    color: aliceblue;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.card img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.cup-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+}
+
+.layer:hover {
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+.layer p {
+    width: 90%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 1.2s;
+}
+
+.layer:hover p {
+    bottom: 37%;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .cup {
+        position: relative;
+        top: -300px;
+        overflow-x: hidden;
+    }
+
+    .card{
+        margin-top: 50px;
+    }
+}
+
+/*------------career------------*/
+
+.career {
+    position: relative;
+    top: -700px;
+    height: 300vh;
+}
+
+.career-head {
+    margin-top: 50px;
+}
+
+.career-head h3 {
+    font-size: 40px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    color: aliceblue;
+}
+
+.career-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.career-card {
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.career-card img {
+    width: 25%;
+    box-shadow: 15px 15px 30px rgb(45, 45, 45), -15px -15px 30px rgb(61, 60, 60);
+    margin-right: 60px;
+}
+
+.career-layer {
+    width: 60%;
+}
+
+.career-layer h4 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.career-layer hr {
+    border: 1px solid;
+    color: rgb(255, 255, 255);
+    width: 30%;
+    margin: 0;
+}
+
+.career-layer p {
+    color: white;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+.career-card:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.career-card:nth-child(2n) img {
+    margin-right: 0;
+    margin-left: 200px;
+}
+
+.career-layer a{
+    color: #fff;
+    transition: 1s;
+}
+
+.career-layer a:hover{
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    .career {
+        top: -300px;
+        overflow-x: hidden;
+        margin-left: 0px;
+    }
+
+    .career-layer p {
+        color: white;
+        margin-top: 15px;
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    .career-card:nth-child(2n) img {
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+}
+/*--------------------container-----------------------*/
+
+.container {
+    background: rgba(30, 30, 30, 0.85);
+    padding: 90px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(117, 172, 237, 0.3);
+    transition: transform 0.3s ease-in-out;
+    margin-top: -1400px;
+    position: relative;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+.container h2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(117, 172, 237);
+    padding-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #444;
+    box-shadow: 0 0 8px rgb(117, 172, 237);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(117, 172, 237);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(117, 172, 237);
+}
+
+label {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+a {
+    color: rgb(117, 172, 237);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .container{
+        top: 50px;
+        margin-left: 0px;
+        overflow-x: hidden;
+    }
+}
+
+/*--------------------footer-----------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    color: #fff;
+    padding: 60px 0px;
+}
+
+footer ul {
+    display: flex;
+    font-size: 48px;
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 0px 10px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+footer ul li a{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer ul li i:hover {
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+  @media (max-width: 700px) {
+    footer {
+        z-index: -1;
+        top: 200px;
+        position: relative;
+    }
+}
+
+
+
+
